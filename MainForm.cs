@@ -196,6 +196,7 @@ namespace EncryptDecryptGUI
             }
         }
 
+        //todo: now target file is invisible. after extend lib, activate this
         private void BtnBrowseTargetFile_Click(object sender, EventArgs e)
         {
             saveFileDialog.CreatePrompt = false;
@@ -241,7 +242,7 @@ namespace EncryptDecryptGUI
         private void FileEncryptDecrypt(HashAlgorithm algorithm, bool isEncrypt)
         {
             var sourceFile = txtSourceFile.Text;
-            var targetFile = txtTargetFile.Text;
+            //var targetFile = txtTargetFile.Text;
             var password = txtPasswordFile.Text;
 
             var cipher = new Cipher(algorithm);
